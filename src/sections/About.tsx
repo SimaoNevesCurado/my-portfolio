@@ -87,12 +87,22 @@ export const AboutSection = () => {
             <div className="container">
 
 
-                <div>
+                <motion.div
+                    className="hidden md:block"
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: 100 }}
+                    transition={{ duration: 1 }}
+                >
                     <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-teal-700 text-transparent bg-clip-text" >About Me</p>
                     <h2 className="font-serif text-3xl md:text-5xl text-center mt-6 ">A Glimpse Into My World</h2>
                     <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto "> Discover more about who I am, what drives me, and the passions that fuel my work. </p>
-                </div>
-                <div className="mt-20 flex flex-col gap-8 ">
+                </motion.div>
+                <motion.div
+
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 1 }}
+                    className="mt-20 flex flex-col gap-8 ">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3 ">
                         <Card className="h-[320px]  md:col-span-2 lg:col-span-1">
                             <div className="flex flex-col px-6 pt-6">
@@ -161,7 +171,7 @@ export const AboutSection = () => {
 
                         </Card>
                     </div>
-                </div>
+                </motion.div>
             </div >
         </div >
     );

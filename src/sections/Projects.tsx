@@ -1,13 +1,12 @@
+"use client";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+
 import workingonit from "@/assets/images/working-on-it.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
-import grainImage from '@/assets/images/grain.jpg';
 import { Card } from "@/components/Card";
-
+import { motion } from "framer-motion";
 const portfolioProjects = [
     {
         company: "SOMBRÀMISTURA",
@@ -51,16 +50,29 @@ export const ProjectsSection = () => {
     return (
         <section className="pb-16 lg:py-24">
             <div className="container">
-                <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-teal-700 text-transparent bg-clip-text">
-                    Portfolio Highlights
-                </p>
-                <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-                    Featured Projects
-                </h2>
-                <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
-                    Here, you&apos;ll find a selection of work that highlights my skills, creativity, and dedication to solving challenges
-                </p>
-                <div className="md:mt-20 flex flex-col mt-10 gap-20">
+                <motion.div
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 1 }}
+
+                >
+                    <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-teal-700 text-transparent bg-clip-text">
+                        Portfolio Highlights
+                    </p>
+                    <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+                        Featured Projects
+                    </h2>
+                    <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
+                        Here, you&apos;ll find a selection of work that highlights my skills, creativity, and dedication to solving challenges
+                    </p>
+                </motion.div>
+                <motion.div
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 1 }}
+
+
+                    className="md:mt-20 flex flex-col mt-10 gap-20">
                     {portfolioProjects.map((project, projectIndex) => (
                         <Card
                             key={`${project.title}-${project.year}`} // Unique key using title and year
@@ -108,14 +120,22 @@ export const ProjectsSection = () => {
                             </div>
                         </Card>
                     ))}
-                </div>
+                </motion.div>
 
                 <div className="flex justify-center">
                     <a href="https://github.com/SimaoNevesCurado" className="inline-block">
-                        <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto md:px-6">
-                            <span>Explore More Projects</span>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 1.1 }}
+                            drag="x"
+                            dragConstraints={{ left: -100, right: 100 }}
+                            initial="hidden"
+                            animate="visible"
+
+                            className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-1 mt-8 md:w-auto md:px-6 px-2 ">
+                            <span className="">Explore More Projects</span>
                             <ArrowUpRight className="size-4" />
-                        </button>
+                        </motion.button>
                     </a>
                 </div>
             </div>
