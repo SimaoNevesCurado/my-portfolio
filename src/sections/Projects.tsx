@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
                     Featured Projects
                 </h2>
                 <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
-                    Here, you'll find a selection of work that highlights my skills, creativity, and dedication to solving challenges
+                    Here, you&apos;ll find a selection of work that highlights my skills, creativity, and dedication to solving challenges
                 </p>
                 <div className="md:mt-20 flex flex-col mt-10 gap-20">
                     {portfolioProjects.map((project, projectIndex) => (
