@@ -17,7 +17,7 @@ const portfolioProjects = [
             { title: "Done with React, Javascript" },
             { title: "Styled with TailwindCSS and Framer Motion" },
         ],
-        link: "https://youtu.be/4k7IdSLxh6w",
+        link: "",
         image: darkSaasLandingPage,
     },
     {
@@ -29,7 +29,7 @@ const portfolioProjects = [
             { title: "Log the exercises" },
             { title: "Track your progress" },
         ],
-        link: "https://youtu.be/7hi5zwO75yc",
+        link: "",
         image: workingonit,
     },
     {
@@ -41,7 +41,7 @@ const portfolioProjects = [
             { title: "Clean and simple" },
             { title: "Straight to the point" },
         ],
-        link: "https://youtu.be/Z7I5uSRHMHg",
+        link: "",
         image: workingonit,
     },
 ];
