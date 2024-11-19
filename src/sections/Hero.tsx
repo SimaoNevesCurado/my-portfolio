@@ -57,7 +57,8 @@ export const HeroSection = () => {
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1.1 }}
-                            drag="x"
+
+                            draggable="false"
                             dragConstraints={{ left: -100, right: 100 }}
                             initial="hidden"
                             animate="visible"
@@ -80,7 +81,8 @@ export const HeroSection = () => {
 
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1.1 }}
-                            drag="x"
+
+                            draggable="false"
                             dragConstraints={{ left: -100, right: 100 }}
                             initial="hidden"
                             animate="visible"

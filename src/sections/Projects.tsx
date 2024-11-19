@@ -127,13 +127,16 @@ export const ProjectsSection = () => {
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1.1 }}
-                            drag="x"
+
                             dragConstraints={{ left: -100, right: 100 }}
                             initial="hidden"
                             animate="visible"
 
                             className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-1 mt-8 md:w-auto md:px-6 px-2 ">
-                            <span className="">Explore More Projects</span>
+                            <span
+
+
+                                className="">Explore More Projects</span>
                             <ArrowUpRight className="size-4" />
                         </motion.button>
                     </a>
