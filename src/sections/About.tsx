@@ -83,7 +83,7 @@ const hobbies = [
 export const AboutSection = () => {
     const constraintRef = useRef(null);
     return (
-        <div className="py-20 lg:py-28 ">
+        <div id="about" className="py-20 lg:py-28 ">
             <div className="container">
 
 
@@ -93,7 +93,7 @@ export const AboutSection = () => {
                     initial={{ opacity: 0, x: 100 }}
                     transition={{ duration: 1 }}
                 >
-                    <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-teal-700 text-transparent bg-clip-text" >About Me</p>
+                    <p className="bg- uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-sky-500 to-teal-500 text-transparent bg-clip-text" >About Me</p>
                     <h2 className="font-serif text-3xl md:text-5xl text-center mt-6 ">A Glimpse Into My World</h2>
                     <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto "> Discover more about who I am, what drives me, and the passions that fuel my work. </p>
                 </motion.div>
@@ -107,7 +107,7 @@ export const AboutSection = () => {
                         <Card className="h-[320px]  md:col-span-2 lg:col-span-1">
                             <div className="flex flex-col px-6 pt-6">
                                 <div className="inline-flex items-center gap-2 ">
-                                    <span className="text-3xl font-bold text-emerald-500">{ICONSECTION}</span>
+                                    <span className="text-3xl font-bold text-sky-500">{ICONSECTION}</span>
                                     <h3 className="font-serif text-3xl">My reads</h3>
                                 </div>
                                 <p className="text-sm  lg:text-base max-w-xs text-white/60 mt-2"> Books that inspire my thinking and personal growth.</p>
@@ -119,7 +119,7 @@ export const AboutSection = () => {
                         <Card className="h-[320px] md:col-span-3 lg:col-span-2">
                             <div className="flex flex-col p-6 md:py-8 md:px-10">
                                 <div className="inline-flex items-center gap-2 ">
-                                    <span className="text-3xl font-bold text-emerald-500">{ICONSECTION}</span>
+                                    <span className="text-3xl font-bold text-sky-500">{ICONSECTION}</span>
                                     <h3 className="font-serif text-3xl">My Toolbox</h3>
                                 </div>
                                 <p className="text-sm lg:text-base max-w-xs text-white/60 mt-2">A selection of tools and languages that empower my projects .</p>
@@ -135,7 +135,7 @@ export const AboutSection = () => {
                         <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
                             <div className="flex flex-col px-6 py-6">
                                 <div className="inline-flex items-center gap-2 ">
-                                    <span className="text-3xl font-bold text-emerald-500">{ICONSECTION}</span>
+                                    <span className="text-3xl font-bold text-sky-500">{ICONSECTION}</span>
                                     <h3 className="font-serif text-3xl">Beyond the code</h3>
                                 </div>
                                 <p className="text-sm lg:text-base max-w-xs text-white/60 mt-2">Explore the books shaping my perspectives.</p>
@@ -143,7 +143,7 @@ export const AboutSection = () => {
 
                             <div className=" relative flex-1" ref={constraintRef} >
                                 {hobbies.map(hobby => (
-                                    <motion.div key={hobby.title} className="inline-flex  items-center gap-2 px-6  bg-gradient-to-r from-emerald-500 to-teal-700 rounded-full py-1.5 absolute"
+                                    <motion.div key={hobby.title} className="inline-flex  items-center gap-2 px-6  bg-gradient-to-r from-sky-400 to-blue-500 rounded-full py-1.5 absolute"
                                         style={
                                             {
                                                 left: hobby.left,
@@ -164,8 +164,8 @@ export const AboutSection = () => {
                         <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
                             <Image src={mapImage} alt="map" className="h-full w-full object-cover object-left-top" />
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-14 rounded-full  after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 to-teal-700 -z-20 animate-ping [animation-duration:2s]"></div>
-                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 to-teal-700 -z-10"></div>
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-400 to-blue-500 -z-20 animate-ping [animation-duration:2s]"></div>
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-400 to-blue-500 -z-10"></div>
                                 <Image src={smileMemoji} alt="emoji smile" className="size-14" />
                             </div>
 

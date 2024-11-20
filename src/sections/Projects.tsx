@@ -48,7 +48,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
     return (
-        <section className="pb-16 lg:py-24">
+        <section id="projects" className="pb-16 lg:py-24">
             <div className="container">
                 <motion.div
                     whileInView={{ opacity: 1, x: 0 }}
@@ -56,7 +56,7 @@ export const ProjectsSection = () => {
                     transition={{ duration: 1 }}
 
                 >
-                    <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-teal-700 text-transparent bg-clip-text">
+                    <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-sky-400 to-blue-500 text-transparent bg-clip-text">
                         Portfolio Highlights
                     </p>
                     <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
@@ -83,7 +83,7 @@ export const ProjectsSection = () => {
                         >
                             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                                 <div className="pb-16">
-                                    <div className="bg-gradient-to-r from-emerald-500 to-teal-700 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                                    <div className="bg-gradient-to-r from-sky-400 to-blue-500 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                                         <span>{project.company}</span>
                                         <span>&bull;</span>
                                         <span>{project.year}</span>

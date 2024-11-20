@@ -12,7 +12,7 @@ export const ContactSection = () => {
                 initial={{ opacity: 0, x: -100 }}
                 transition={{ duration: 1 }}
                 className='container'>
-                <div className='bg-gradient-to-r from-emerald-500 to-teal-700 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden'>
+                <div className='bg-gradient-to-r from-sky-400 to-blue-500 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden'>
                     {/* Background Image */}
                     <div
                         className='absolute inset-0 opacity-5 pointer-events-none -z-10'

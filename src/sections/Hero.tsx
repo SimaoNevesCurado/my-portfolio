@@ -86,9 +86,13 @@ export const HeroSection = () => {
                             dragConstraints={{ left: -100, right: 100 }}
                             initial="hidden"
                             animate="visible"
+
                             className=' z-10 inline-flex items-center gap-2 border bg-white text-gray-900 h-12 px-6 rounded-xl'>
+
                             <span>👋</span>
+                            <a href="https://github.com/SimaoNevesCurado">
                             <span className='font-semibold'>Explore my Work</span>
+                            </a>
                         </motion.button>
                     </motion.div>
                 </div>
