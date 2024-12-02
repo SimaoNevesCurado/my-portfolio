@@ -3,7 +3,6 @@
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Flag from 'react-world-flags';
 
 const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -81,7 +80,7 @@ export const HeroSection= () => {
   {/* Badge Content */}
   <div className="bg-neutral-900 outline outline-1 outline-offset-2 outline-neutral-600 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg mt-1 relative -z-10">
     <div className="size-6 rounded-full items-center inline-flex">
-      <Flag code={620} />
+
     </div>
     <div className="text-sm font-semibold md:font-medium">Based in Portugal</div>
   </div>
