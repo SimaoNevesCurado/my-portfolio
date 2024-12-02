@@ -1,147 +1,40 @@
 "use client";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 
-import workingonit from "@/assets/images/working-on-it.png";
-import Image from "next/image";
-import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
-import { Card } from "@/components/Card";
-import { motion } from "framer-motion";
-const portfolioProjects = [
-    {
-        company: "SOMBRÀMISTURA",
-        year: "2023",
-        title: "Company Website",
-        results: [
-            { title: "A fully functional and visually engaging website " },
-            { title: "Done with React, Javascript" },
-            { title: "Styled with TailwindCSS and Framer Motion" },
-        ],
-        link: "",
-        image: darkSaasLandingPage,
-    },
-    {
-        company: "Still developing",
-        year: "2024",
-        title: "Workout Mobile App",
-        results: [
-            { title: "Functional workout App with React Native" },
-            { title: "Log the exercises" },
-            { title: "Track your progress" },
-        ],
-        link: "",
-        image: workingonit,
-    },
-    {
-        company: "Individual Client",
-        year: "2024",
-        title: "Photographer Portfolio",
-        results: [
-            { title: "Visually captivating portfolio" },
-            { title: "Clean and simple" },
-            { title: "Straight to the point" },
-        ],
-        link: "",
-        image: workingonit,
-    },
-];
+import { portfolioProjects } from "@/assets/data/constants";
+import ProjectCard from "@/components/Card";
 
-export const ProjectsSection = () => {
+const ProjectsSection = () => {
     return (
-        <section id="projects" className="pb-16 lg:py-24">
-            <div className="container">
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
+        <div className="container">
+            <div className="py-32" id="work">
 
-                >
-                    <p className="uppercase text-center font-semibold tracking-widest bg-gradient-to-r from-sky-400 to-blue-500 text-transparent bg-clip-text">
-                        Portfolio Highlights
-                    </p>
-                    <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+                <div className=" text-center mb-6">
+
+                    <h2 className="text-3xl  min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200 mb-6">
                         Featured Projects
                     </h2>
-                    <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
+                    <p className="text-sm max-w-md mx-auto min-[430px]:text-base  md:max-w-3xl text-dark-200/70 dark:text-stone-200/70">
                         Here, you&apos;ll find a selection of work that highlights my skills, creativity, and dedication to solving challenges
                     </p>
-                </motion.div>
-                <motion.div
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
+                </div>
+                <div className="flex gap-4 flex-col sm:flex-row sm:items-center justify-between">
+    <a
+        href=""
+        className="bg-neutral-900 text-white text-sm md:text-base px-4 py-2 rounded-xl border border-neutral-400/30 shadow-lg hover:scale-110 hover:bg-neutral-800 hover:border-white hover:shadow-neutral-600/50 transition-all duration-300"
+    >
+        All Projects
+    </a>
+</div>
 
 
-                    className="md:mt-20 flex flex-col mt-10 gap-20">
-                    {portfolioProjects.map((project, projectIndex) => (
-                        <Card
-                            key={`${project.title}-${project.year}`} // Unique key using title and year
-                            className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
-                            style={{
-                                top: `calc(64px + ${projectIndex * 40}px)`,
-                            }}
-                        >
-                            <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                                <div className="pb-16">
-                                    <div className="bg-gradient-to-r from-sky-400 to-blue-500 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
-                                        <span>{project.company}</span>
-                                        <span>&bull;</span>
-                                        <span>{project.year}</span>
-                                    </div>
-
-                                    <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">{project.title}</h3>
-                                    <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-
-                                    <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                                        {project.results.map((result, index) => (
-                                            <li key={index} className="flex gap-2 text-sm md:text-base text-white/50">
-                                                <CheckCircleIcon className="size-5 md:size-6" />
-                                                <span>{result.title.replace("'", "&#39;")}</span> {/* Escaping single quotes */}
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    {/* Link is now properly structured around the button */}
-                                    <a href={project.link}>
-                                        <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto md:px-6">
-                                            <span>See More</span>
-                                            <ArrowUpRight className="size-4" />
-                                        </button>
-                                    </a>
-                                </div>
-
-                                <div className="relative">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-                                    />
-                                </div>
-                            </div>
-                        </Card>
+                <div className="grid lg:grid-cols-3 gap-4 mt-8">
+                    {portfolioProjects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
                     ))}
-                </motion.div>
-
-                <div className="flex justify-center">
-                    <a href="https://github.com/SimaoNevesCurado" className="inline-block">
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 1.1 }}
-
-                            dragConstraints={{ left: -100, right: 100 }}
-                            initial="hidden"
-                            animate="visible"
-
-                            className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-1 mt-8 md:w-auto md:px-6 px-2 ">
-                            <span
-
-
-                                className="">Explore More Projects</span>
-                            <ArrowUpRight className="size-4" />
-                        </motion.button>
-                    </a>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
+
+export default ProjectsSection;

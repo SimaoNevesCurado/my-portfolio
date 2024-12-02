@@ -2,6 +2,8 @@
 
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import { motion } from "framer-motion";
+import pfp from "@/assets/images/pfp.jpg";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Flag from 'react-world-flags';
 
@@ -28,7 +30,7 @@ const handleDownload = () => {
         console.error("Error downloading the file:", error);
     }
 };
-export const HeroSection= () => {
+export const Test = () => {
     const [textHighlight, setTextHighlight] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [hoverTimer, setHoverTimer] = useState(null);
@@ -67,11 +69,11 @@ export const HeroSection= () => {
     <motion.rect
       x="-3"
       y="5"
-      width="326"
+      width="325"
       height="67"
       rx="15"
       stroke="#15803d"
-      strokeWidth="5"
+      strokeWidth="4"
       variants={draw}
       initial="hidden"
       animate={isHovered ? "visible" : "hidden"}
@@ -98,6 +100,7 @@ export const HeroSection= () => {
                     >
                         Quality <span className="text-blue-500">Software</span> and <span className="text-blue-500">Web Development </span> synergy
                     </motion.h1>
+
                     <p className="text-sm max-w-md mx-auto min-[430px]:text-base  md:max-w-3xl">
                         <span
                             className={`${textHighlight ? "text-gray-500/50" : "text-dark-200/70 dark:text-stone-200/70"
@@ -107,8 +110,8 @@ export const HeroSection= () => {
                         </span>
                         <span
                             className={`${textHighlight
-                                ? "highlight-animation bg-gradient-to-r from-blue-400/30 to-blue-400/30 font-bold bg-[length:0%_100%]  bg-no-repeat transition-all duration-1000 ease-in-out"
-                                : "text-dark-200/70 dark:text-stone-200/70 transition-all duration-300"
+                                ? "highlight-animation bg-gradient-to-r from-teal-600 to-teal-600 to-red-900bg-[length:0%_100%] text-black font-bold bg-no-repeat transition-all duration-1000 ease-in-out"
+                                : "text-dark-200/70 dark:text-stone-200/70"
                                 } px-1 inline-block`}
                         >
                             Computer Science and engineering student
@@ -121,8 +124,8 @@ export const HeroSection= () => {
                         </span>
                         <span
                             className={`${textHighlight
-                                ? "highlight-animation bg-gradient-to-r from-blue-400/30 to-blue-400/30 font-bold bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
-                                : "  text-dark-200/70 dark:text-stone-200/70 transition-all duration-300"
+                                ? "highlight-animation bg-gradient-to-r from-green-900/30 to-red-900/30 bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
+                                : "  text-dark-200/70 dark:text-stone-200/70"
                                 } px-1 inline-block`}
                         >
                             leverage my experience.
@@ -137,8 +140,8 @@ export const HeroSection= () => {
                         </span>
                         <span
                             className={`${textHighlight
-                                ? "highlight-animation bg-gradient-to-r from-blue-400/30 to-blue-400/30 font-bold  bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out "
-                                : "  text-dark-200/70 dark:text-stone-200/70 transition-all duration-300"
+                                ? "highlight-animation bg-gradient-to-r from-green-900/30 to-red-900/30 bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
+                                : "  text-dark-200/70 dark:text-stone-200/70"
                                 } px-1 inline-block`}
                         >
                             exploring open-source projects to learn
@@ -151,8 +154,8 @@ export const HeroSection= () => {
                         </span>
                         <span
                             className={`${textHighlight
-                                ? "highlight-animation bg-gradient-to-r from-blue-400/30 to-blue-400/30 font-bold bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
-                                : "  text-dark-200/70 dark:text-stone-200/70 transition-all duration-300"
+                                ? "highlight-animation bg-gradient-to-r from-green-900/30 to-red-900/30 bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
+                                : "  text-dark-200/70 dark:text-stone-200/70"
                                 } px-1 inline-block`}
                         >
                             help answer technical questions
@@ -165,8 +168,8 @@ export const HeroSection= () => {
                         </span>
                         <span
                             className={`${textHighlight
-                                ? "highlight-animation bg-gradient-to-r from-blue-400/30 to-blue-400/30 font-bold bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
-                                : "  text-dark-200/70 dark:text-stone-200/70 transition-all duration-300"
+                                ? "highlight-animation bg-gradient-to-r from-green-900/30 to-red-900/30 bg-[length:0%_100%] bg-no-repeat transition-all duration-1000 ease-in-out"
+                                : "  text-dark-200/70 dark:text-stone-200/70"
                                 } px-1 inline-block`}
                         >
                             troubleshoot code

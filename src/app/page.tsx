@@ -1,22 +1,19 @@
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
-import { ProjectsSection } from "@/sections/Projects";
-import { TapeSection } from "@/sections/Tape";
-import { AboutSection } from "@/sections/About";
-import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
-import ScrollIntoView from 'react-scroll-into-view';
+import Skills from "@/sections/Skills";
+import ProjectsSection from "@/sections/Projects";
+
+
 
 export default function Home() {
     return (
         <div>
             <Header />
-            <HeroSection />
+           <HeroSection/>
+            <Skills />
             <ProjectsSection />
-            <TapeSection />
-            <AboutSection />
-            <ContactSection />
-            <Footer/>
+            <Footer />
 
         </div>
     );
