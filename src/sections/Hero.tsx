@@ -30,7 +30,7 @@ const handleDownload = () => {
 export const HeroSection= () => {
     const [textHighlight, setTextHighlight] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
-    const [hoverTimer, setHoverTimer] = useState(null);
+    const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
 
     const handleHoverStart = () => {
         setIsHovered(true);
