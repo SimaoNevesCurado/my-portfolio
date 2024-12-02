@@ -12,7 +12,7 @@ interface ProjectProps {
     subheading: string;
     description: string;
     imageUrl: string;
-    techStack: string[];
+    techStack: (string | undefined)[];
     liveDemoUrl: string;
     sourceCodeUrl: string;
 }
