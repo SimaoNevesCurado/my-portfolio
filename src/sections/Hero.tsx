@@ -3,6 +3,7 @@
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import ReactCountryFlag from "react-country-flag";
 
 const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -80,7 +81,10 @@ export const HeroSection= () => {
   {/* Badge Content */}
   <div className="bg-neutral-900 outline outline-1 outline-offset-2 outline-neutral-600 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg mt-1 relative -z-10">
     <div className="size-6 rounded-full items-center inline-flex">
-
+    <ReactCountryFlag style={{
+                    fontSize: '2em',
+                    lineHeight: '2em',
+                }} countryCode="PT" svg />
     </div>
     <div className="text-sm font-semibold md:font-medium">Based in Portugal</div>
   </div>
