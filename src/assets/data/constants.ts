@@ -145,7 +145,6 @@ export const techCardsItems = [
           "NextJS",
           "TailwindCSS",
           "React",
-    ,
         ],
         liveDemoUrl: "https://nextcut.vercel.app",
         sourceCodeUrl: "https://github.com/andrijaweb/nextCut-app",
